@@ -6,10 +6,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.app.samplesv3.springbootmicroservicesrs.model.Rating;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class RSController.
+ */
 @RestController
 @RequestMapping("/ratingsdata")
 public class RSController {
 
+    /**
+     * Gets the movie rating.
+     *
+     * @param movieId the movie id
+     * @return the movie rating
+     */
     @RequestMapping("/movies/{movieId}")
     public Rating getMovieRating(@PathVariable("movieId") String movieId) {
         return new Rating(movieId, 4);
